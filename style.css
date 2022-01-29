@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100vh;    
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Poppins;
+    font-weight: 400;
+    background-color: #FBF7F5;
+    color: #828282
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {    
+    border: 1px solid #828282;
+    border-radius: 6px;
+    background-color: transparent;
+    padding: 16px;
+    color: #828282;  
+
+}
+
+.navbar {
+    height: 64px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: white;    
+    align-items: center;
+    justify-content: space-around;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
+}
+
+
+.navbar > .button {
+    padding: 8px 16px 8px 16px;
+    font-size: 88%; 
+    border-color: #D56470;
+    color: #D56470;
+
+}
+
+.navbar > .button.active {
+    background-color: #D56470;
+    color: white;
+    font-family: 500;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.main > * {
+    margin: 12px;
+}
+
+.actor {
+    font-size: 48px;
+    font-family: Parisienne;
+    text-align: center;
+    color: #D56470;
+}
+
+.caption {
+    font-size: 100%;    
+    color: #828282;
+    font-weight: 300;
+}
+
+.mandala {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
