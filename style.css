@@ -24,6 +24,11 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 764px;
+    margin: auto;
+}
+
 .button {    
     border: 1px solid #828282;
     border-radius: 6px;
@@ -37,16 +42,19 @@ a {
     height: 64px;
     position: fixed;
     top: 0;
-    width: 100%;
-    display: flex;
-    background-color: white;    
-    align-items: center;
-    justify-content: space-around;
+    width: 100%;    
+    background-color: white;        
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
 }
 
+.navbar > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: inherit;
+}
 
-.navbar > .button {
+.navbar > .container > .button {
     padding: 8px 16px 8px 16px;
     font-size: 88%; 
     border-color: #D56470;
@@ -54,7 +62,7 @@ a {
 
 }
 
-.navbar > .button.active {
+.navbar > .container > .button.active {
     background-color: #D56470;
     color: white;
     font-family: 500;
@@ -65,7 +73,7 @@ a {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .main > * {
@@ -89,4 +97,51 @@ a {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+
+.image {
+    width: 100%;
+    max-height: 50vh;
+}
+
+.section-header {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #D56470;
+}
+
+#darkbox { width:1280px; height:720px; position:absolute;
+    top:0; left:0; background-color:#333; overflow: hidden; text-align:center;
+}
+.darkboximg { padding:5%; max-width: 1216px; max-height: 684px; }
+
+#gallery {
+    line-height:0;
+    -webkit-column-count:2;
+    -webkit-column-gap:5px;
+    -moz-column-count:2;
+    -moz-column-gap:5px;
+    column-count:2;
+    column-gap:5px;
+    margin-top:2rem;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px;
+    filter: grayscale(100%);
+    transition: filter 2s;
+}
+
+#gallery img:hover {
+    filter:none;
+}
+
+@media (max-width: 400px) {
+    #gallery {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+    }
 }
