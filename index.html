@@ -3,25 +3,65 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./style.css">
+<script>
+    
+    function onNavigationClick(link) {
+        var navbar = document.getElementsByClassName("navbar")[0];
+        var links = navbar.children
+        for (let index = 0; index < links.length; index++) {
+            links[index].classList.remove("active");    
+        }
+        link.classList.add("active");
+    }
+
+</script>
 </head>
-<body>    
+
+<body> 
+
 <div class="navbar">
-    <a href="#home" class="button active">Home</a>
-    <a href="#news" class="button">Pictures</a>
-    <a href="#contact" class="button">Events</a>
+    <a href="#main" class="button active" onclick="onNavigationClick(this)">Home</a>
+    <a href="#pictures" class="button" onclick="onNavigationClick(this)">Pictures</a>
+    <a href="#events" class="button" onclick="onNavigationClick(this)">Events</a>
 </div>
 
-<div class="main">
-<span class="actor">Charchit <br> & <br> Vagmeeta</span>
-<span class="caption">ARE TYING THE KNOT</span>
+<section id="main">
+    <div class="main">
+        <span class="actor">Charchit <br> & <br> Vagmeeta</span>
+        <span class="caption">ARE TYING THE KNOT</span>
+        
+        <a href="#watch" class="button main-element">
+            WATCH THEM LIVE
+        </a>
+        </div>
+</section>
 
+<section id="watch">
+    <div class="main">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/domxhkB4G4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+</section>
 
-<a class="button main-element">
-    WATCH THEM LIVE
-</a>
+<section id="pictures">
+    <div class="main">
+        <span class="actor">Charchit <br> & <br> Vagmeeta</span>
+        <span class="caption">ARE TYING THE KNOT</span>
+        
+        <a class="button main-element">
+            WATCH THEM LIVE
+        </a>
+        </div>
+</section>
 
-
-</div>
-
+<section id="events">
+    <div class="main">
+        <span class="actor">Charchit <br> & <br> Vagmeeta</span>
+        <span class="caption">ARE TYING THE KNOT</span>
+        
+        <a class="button main-element">
+            WATCH THEM LIVE
+        </a>
+        </div>
+</section>
 </body>
 </html>
